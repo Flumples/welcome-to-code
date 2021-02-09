@@ -36,7 +36,7 @@ _After this lesson, you will be able to:_
 - Your normal workflow includes working in the IDE(VSCode) and using the GIT terminal. Here we are going to learn how to integrate the GIT terminal into VSC for an easier time.
 
 1. Open VSC
-2. Open Visual Studio Code and press and hold `Ctrl` + `` `to open the terminal.
+2. Open Visual Studio Code and press and hold `Ctrl` + ``` to open the terminal.
 
 ![](https://i.stack.imgur.com/V4hx4.png)
 
