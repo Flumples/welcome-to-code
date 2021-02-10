@@ -9,7 +9,6 @@ _After this lesson, you will be able to:_
 1. Describe what a command line interface is
 1. Describe the state of the current directory
 1. Change Directories
-1. List some keyboard shortcuts
 1. Create files and folders
 1. Navigate using relative pathing on the command line
 1. Navigate using absolute pathing on the command line
@@ -36,7 +35,7 @@ _After this lesson, you will be able to:_
 - Your normal workflow includes working in the IDE(VSCode) and using the GIT terminal. Here we are going to learn how to integrate the GIT terminal into VSC for an easier time.
 
 1. Open VSC
-2. Open Visual Studio Code and press and hold `Ctrl` + ``` to open the terminal.
+2. Open Visual Studio Code and press and hold `Ctrl` + **`** to open the terminal.
 
 ![](https://i.stack.imgur.com/V4hx4.png)
 
@@ -105,17 +104,6 @@ We can navigate to other directories _relative_ to the current working directory
 - `cd` will take you back home
 
 
-## List some keyboard shortcuts
-
-In the long term, reduce your reliance on the mouse. More Bash keyboard shortcuts:
-
-- `⌘ K` Clear the Terminal window
-- `option arrow` Move cursor by word
-- letter[TAB]
-	- autocompletes (case-sensitive)
-- up / down arrow
-	- cycle command history
-
 ## Create files and folders
 
 - `mkdir`
@@ -129,3 +117,108 @@ In the long term, reduce your reliance on the mouse. More Bash keyboard shortcut
 	- Example:
 		- `touch file.txt`
 			- makes a .txt file
+
+
+### Activity (10 min)
+
+**Construct a Labyrinth**
+
+Using what you know about navigating directories and creating files and folders, construct a 'labyrinth' on your desktop.
+
+**Precision** is important. There are a few layers to this exercise. Be patient.
+
+- Make sure you are in the correct directory when you go to create another directory or file.
+- Make sure you use `touch` to make files, and `mkdir` to make directories. **files** and **directories** are two different things.
+
+* Navigate to Desktop
+* `mkdir Labyrinth`, `cd Labyrinth`
+* Make a directory structure like this:
+
+![labyrinth](https://i.imgur.com/pY0MxS8.png)
+
+**parlor** and **stairway** are _child directories_ of the Labyrinth directory.
+
+**sarah_williams.txt** is a _file_ inside the the ballroom directory.
+
+If you make a mistake, don't worry, just keep adding the right stuff to the right place.
+
+## Navigate using relative pathing on the command line
+
+Chain more directories to the current path with the `/` separator
+
+- Go down the chain into child directories
+	- `cd parent_directory`
+	- `cd parent_directory/child_directory`
+	- `cd parent_directory/child_directory/grandchild_directory`
+
+- Go up the chain into parent directories
+	- `cd ..`
+	- `cd ../..`
+	- `cd ../../..`
+
+- Go sideways into a _sibling_ directory by first going up, then down
+	- `cd ../sibling_directory`
+
+- Go into an _aunt_ or _uncle_ directory by first going up to the parent, then the grandparent, then down again on another branch:
+
+	- `cd ../../auntie_directory`
+
+
+### Activity
+
+**Navigate the Labyrinth**
+
+* Navigate to the Labyrinth root directory
+* From the Labyrinth root directory, navigate to the `stairway`
+* From the `stairway`, navigate to the `parlor`
+* From the `parlor`, navigate to the `dining room`
+* From the `dining room`, navigate to the `escher room`
+* From the `escher room`, navigate to the Labyrinth root
+
+### Activity (10 min)
+
+**Navigate the Labyrinth**
+
+For each of these, write your command on one line, using full paths:
+
+* Navigate to the Labyrinth root directory
+* From the Labyrinth root directory, navigate to the `dining_room`
+* From the `dining room`, navigate back up the root directory
+* From the Labyrinth root directory, navigate to the `stairway`
+* From the `stairway`, navigate to the `parlor`
+* From the `parlor`, navigate to the `escher_room`
+* From the `escher room`, navigate to the `throne_room`
+* From the `throne_room`, navigate to the `ball_room`
+
+## Navigate using absolute pathing on the command line
+
+Move anywhere relative to the home directory:
+
+`cd ~/` - the path starts in home directory
+
+Example:
+
+- `cd ~/Desktop/Labyrinth/stairway/escher_room`
+
+Navigates to the escher room _no matter where_ you are currently located in your filesystem
+
+> NOTE: You can combine absolute and relative pathing when copying or moving files from one location to another with `cp` and `mv`.
+
+### Activity (3 min)
+
+**Navigate the Labyrinth**
+
+Using absolute pathing:
+
+* Navigate to the throne_room
+* Navigate to the ballroom
+* Navigate to the parlor
+
+## Run some code
+
+We are going to:
+
+* make a file
+* open it in our text editor
+* write some code
+* run the code in Terminal
