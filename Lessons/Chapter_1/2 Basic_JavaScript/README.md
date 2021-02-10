@@ -35,13 +35,13 @@ a CD. _(Eloquent JavaScript 2010 ed.)_
 100
 ```
 
-		- Put that into a program, and it will cause the number 144 to come into existence inside the computer. This is what 144 might look like in bits:
+- Put that into a program, and it will cause the number 144 to come into existence inside the computer. This is what 144 might look like in bits:
 
 ```
 0100000001100010000000000000000000000000000000000000000000000000
 ```
-		- If you were expecting something like 10010000 here (which is the integer or binary representation of 144) ...good call. It might actually be represented like that in some situations. But the standard describes JavaScript numbers as 64-bit floating-point values. This means they can also contain fractions and exponents.
-		- But we won’t go too deeply into binary representations here. The interesting thing, to us, is the practical repercussions they have for our numbers. For one thing, the fact that numbers are represented by a limited amount of bits means they have a limited precision. A set of 64 1/0 values can represent only 264 different numbers. This is a lot, though, more than 1019 (a 1 with 19 zeroes).
+- If you were expecting something like 10010000 here (which is the integer or binary representation of 144) ...good call. It might actually be represented like that in some situations. But the standard describes JavaScript numbers as 64-bit floating-point values. This means they can also contain fractions and exponents.
+- But we won’t go too deeply into binary representations here. The interesting thing, to us, is the practical repercussions they have for our numbers. For one thing, the fact that numbers are represented by a limited amount of bits means they have a limited precision. A set of 64 1/0 values can represent only 264 different numbers. This is a lot, though, more than 1019 (a 1 with 19 zeroes).
 
 ## How does this work? Aka (The Execution Context Interview Question Answer)
 
