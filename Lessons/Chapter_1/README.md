@@ -207,7 +207,7 @@ Navigates to the escher room _no matter where_ you are currently located in your
 > NOTE: You can combine absolute and relative pathing when copying or moving files from one location to another with `cp` and `mv`.
 
 
-### Activity (3 min)
+### Activity (5 min)
 
 **Navigate the Labyrinth**
 
@@ -226,3 +226,36 @@ We are going to:
 * open it in our text editor
 * write some code
 * run the code in Terminal
+
+
+### Hello World! (10 min)
+
+#### Create Files/Directories
+
+* In Terminal, navigate to Documents or where you'd like to store your code.
+* Make a directory `Chapter 1 Code`.
+* Go inside the directory.
+* Make a file `first_code.js`.
+* In Terminal, type `code ,` and your explorer(left tab) should update with your new location and files.
+* Double click `first_code.js` on the explorer to open your JavaScript file.
+
+
+#### Write/Run Code
+
+* Check version of Node `node -v`. You should have a version greater than 8.
+* Let's send a message to the console. It is somewhat of a tradition to write a 'Hello World' message as the first thing you do in programming.
+
+```
+console.log('Hello World!');
+```
+
+Run the code in Terminal
+
+> `node filename.js`
+> => Hello World!
+
+**Congrats!** You've written your first "Hello World" of wdi-remote!
+
+We can send whatever we want to the console.
+
+`console.log('The rain in Spain falls mainly on the plain');`
