@@ -60,7 +60,7 @@ When terminal launches with VSC, it will start in your computer's home directory
 
 In Terminal-land, **Directories** are the same as **Folders** (we just call them **Directories**).
 
-**NOTE: SUPPORTING IMAGES WILL NOT BE 100% REFLECTIVE OF WHAT YOU SEE ON YOUR SCREEN. FOCUS ON THE SPECIFIC DETAILS SUCH AS THE _NOTATION_ AND THE _TERMINOLOGY_**
+> NOTE: SUPPORTING IMAGES WILL NOT BE 100% REFLECTIVE OF WHAT YOU SEE ON YOUR SCREEN. FOCUS ON THE SPECIFIC DETAILS SUCH AS THE _NOTATION_ AND THE _TERMINOLOGY_
 
 ![](https://i.imgur.com/tTyOkwV.png)
 
@@ -175,6 +175,7 @@ Chain more directories to the current path with the `/` separator
 * From the `dining room`, navigate to the `escher room`
 * From the `escher room`, navigate to the Labyrinth root
 
+
 ### Activity (10 min)
 
 **Navigate the Labyrinth**
@@ -190,6 +191,7 @@ For each of these, write your command on one line, using full paths:
 * From the `escher room`, navigate to the `throne_room`
 * From the `throne_room`, navigate to the `ball_room`
 
+
 ## Navigate using absolute pathing on the command line
 
 Move anywhere relative to the home directory:
@@ -204,6 +206,7 @@ Navigates to the escher room _no matter where_ you are currently located in your
 
 > NOTE: You can combine absolute and relative pathing when copying or moving files from one location to another with `cp` and `mv`.
 
+
 ### Activity (3 min)
 
 **Navigate the Labyrinth**
@@ -213,6 +216,7 @@ Using absolute pathing:
 * Navigate to the throne_room
 * Navigate to the ballroom
 * Navigate to the parlor
+
 
 ## Run some code
 
