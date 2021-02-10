@@ -22,24 +22,26 @@ alike. Bits are any kinds of two-valued things, usually
 described as 0s and 1s. Inside the computer, they
 take forms like a high or low electrical charge, a strong
 or weak signal, or a shiny or dull spot on the surface of
-a CD. _Eloquent JavaScript 2010 ed._
+a CD. _(Eloquent JavaScript 2010 ed.)_
 
 
 ## Define and identify Values and Variables
 - There are six basic types of values: **numbers**, **strings**, **Booleans**, **objects**, **functions**, and **undefined** values.
-- To create a value, one must merely invoke its name. This is very convenient.
-You don’t have to gather building material for your values or pay
-for them; you just call for one, and woosh, you have it. They are not created
-from thin air, of course. Every value has to be stored somewhere, and if you
-want to use a gigantic amount of them at the same time you might run out
-of computer memory. Fortunately, this is a problem only if you need them
-all simultaneously. As soon as you no longer use a value, it will dissipate, leaving
-behind only a few bits. These bits are recycled to make the next generation
-of values.
-	- Numbers
-		- Values of the number type are, as you might have guessed, numeric values.
-They are written as numbers usually are:
+- To create a value, one must merely invoke its name. You don’t have to gather building material for your values or pay for them; you just call for one, and *woosh*, you have it. They are not created from thin air, of course. Every value has to be stored somewhere, and if you want to use a gigantic amount of them at the same time you might run out of computer memory. Fortunately, this is a problem only if you need them all simultaneously. As soon as you no longer use a value, it will dissipate, leaving behind only a few bits. These bits are recycled to make the next generation of values.
+	- **Numbers**
+		- Values of the number type are, as you might have guessed, numeric values.They are written as numbers usually are:
 
+```
+100
+```
+
+		- Put that into a program, and it will cause the number 144 to come into existence inside the computer. This is what 144 might look like in bits:
+
+```
+0100000001100010000000000000000000000000000000000000000000000000
+```
+		- If you were expecting something like 10010000 here (which is the integer or binary representation of 144) ...good call. It might actually be represented like that in some situations. But the standard describes JavaScript numbers as 64-bit floating-point values. This means they can also contain fractions and exponents.
+		- But we won’t go too deeply into binary representations here. The interesting thing, to us, is the practical repercussions they have for our numbers. For one thing, the fact that numbers are represented by a limited amount of bits means they have a limited precision. A set of 64 1/0 values can represent only 264 different numbers. This is a lot, though, more than 1019 (a 1 with 19 zeroes).
 
 ## How does this work? Aka (The Execution Context Interview Question Answer)
 
