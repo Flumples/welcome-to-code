@@ -28,6 +28,8 @@ a CD. _(Eloquent JavaScript 2010 ed.)_
 ## Define and identify Values and Variables
 - There are six basic types of values: **numbers**, **strings**, **Booleans**, **objects**, **functions**, and **undefined** values.
 - To create a value, one must merely invoke its name. You don’t have to gather building material for your values or pay for them; you just call for one, and *woosh*, you have it. They are not created from thin air, of course. Every value has to be stored somewhere, and if you want to use a gigantic amount of them at the same time you might run out of computer memory. Fortunately, this is a problem only if you need them all simultaneously. As soon as you no longer use a value, it will dissipate, leaving behind only a few bits. These bits are recycled to make the next generation of values.
+
+
 	- **Numbers**
 		- Values of the number type are, as you might have guessed, numeric values.They are written as numbers usually are:
 
@@ -40,8 +42,84 @@ a CD. _(Eloquent JavaScript 2010 ed.)_
 ```
 0100000001100010000000000000000000000000000000000000000000000000
 ```
+
 - If you were expecting something like 10010000 here (which is the integer or binary representation of 144) ...good call. It might actually be represented like that in some situations. But the standard describes JavaScript numbers as 64-bit floating-point values. This means they can also contain fractions and exponents.
-- But we won’t go too deeply into binary representations here. The interesting thing, to us, is the practical repercussions they have for our numbers. For one thing, the fact that numbers are represented by a limited amount of bits means they have a limited precision. A set of 64 1/0 values can represent only 264 different numbers. This is a lot, though, more than 1019 (a 1 with 19 zeroes).
+- But we won’t go too deeply into binary representations here. The interesting thing, to us, is the practical repercussions they have for our numbers. For one thing, the fact that numbers are represented by a limited amount of bits means they have a limited precision. A set of 64 with values 1 or 0, can represent only 264 different numbers. This is a lot, though, more than 1019 (a 1 with 19 zeroes).
+- Fractional numbers are written by using a dot:
+
+```
+9.81
+```
+
+- For very big or very small numbers, one can also use “scientific” notation
+by adding an e, followed by the exponent of the number:
+
+```
+2.998e8
+```
+
+- That is 2.998 x 10^8 = 299800000.
+- Calculations with whole numbers (also called integers) that fit in 52 bits are guaranteed to always be precise. Unfortunately, calculations with fractional numbers are generally not. Like  (pi) cannot be precisely expressed by a finite amount of decimal digits, many numbers lose some precision when only 64 bits are available to store them. This is a shame, but it causes practical problems only in very specific situations. The important thing is to be aware of it and treat fractional digital numbers as approximations, not as precise values.
+
+
+	- **Arithmetic**
+		- Arithmetic operations such as addition or multiplication take two number values and produce a new number from them. Here is what they look like in JavaScript:
+
+```
+100 + 4 * 11
+```
+- The + and * symbols are called *operators*. The first stands for addition, and the second stands for multiplication. Putting an operator between two values will apply it to those values and produce a new value.
+- Does the example mean “add 4 and 100, and multiply the result by 11,” or is the multiplication done before the adding? As you might have guessed, the multiplication happens first. But, as in mathematics, this can be changed by wrapping the addition in parentheses:
+
+```
+(100 + 4) * 11
+```
+
+- For subtraction, there is the - operator, and division can be done with /. When operators appear together without parentheses, the order in which they are applied is determined by the precedence of the operators. The example show that multiplication comes before addition. / has the same precedence as *, and likewise for + and -. When multiple operators with the same precedence appear next to each other (as in 1 - 2 + 1), they are applied left to right.
+- These rules of precedence are not something you should worry about.
+- When in doubt, just add parentheses. There is one more arithmetic operator, which is possibly less familiar to you. The % symbol is used to represent the *modulo* operation. X modulo Y is the remainder of dividing X by Y. For example, 314 % 100 is 14, 10 % 3 is 1, and 144 % 12 is 0. Modulo’s precedence is the same as that of multiplication and division.
+
+
+	- **Strings**
+		- The next data type is the string. Its use is not as evident from its name as with numbers, but it also fulfills a very basic role. Strings are used to represent text. (The name supposedly derives from the fact that it strings together a bunch of characters.) Strings are written by enclosing their content in quotes:
+
+```
+"Patch my boat with chewing gum."
+'You ain't never seen a donkey fly!'
+```
+
+- Both single and double quotes can be used to mark strings—as long as the quotes at the start and the end of the string match.
+- Almost anything can be put between quotes, and JavaScript will make a string value out of it. But a few characters are tricky. You can imagine how putting quotes between quotes might be hard. Newlines, the things you get when you press ENTER, can also not be put between quotes—the string has to stay on a single line.
+- To be able to have such characters in a string, the following trick is used: Whenever a backslash (\) is found inside quoted text, it indicates that the character after it has a special meaning. A quote that is preceded by a backslash will not end the string, but be part of it. When an n character occurs after a backslash, it is interpreted as a newline. Similarly, a t after a backslash means a tab character. Take the following string:
+
+```
+"This is the first line\nAnd this is the second"
+```
+
+The actual text contained is this:
+
+```
+This is the first line
+And this is the second
+```
+
+- There are, of course, situations where you want a backslash in a string to
+be just a backslash, not a special code. If two backslashes follow each other,
+they will collapse right into each other, and only one will be left in the resulting
+string value. This is how the string A newline character is written like
+"\n" can be written:
+
+```
+"A newline character is written like \"\\n\"."
+```
+
+- Strings cannot be divided, multiplied, or subtracted. The + operator can
+be used on them. It does not add, but it concatenates; it glues two strings
+together. The following line will produce the string "concatenate":
+
+```
+"con" + "cat" + "e" + "nate"
+```
 
 ## How does this work? Aka (The Execution Context Interview Question Answer)
 
