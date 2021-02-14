@@ -121,6 +121,24 @@ together. The following line will produce the string "concatenate":
 "con" + "cat" + "e" + "nate"
 ```
 
+
+	- **Unary Operators**
+		- Not all operators are symbols; some are written as words. One example is the typeof operator, which produces a string value naming the type of the value you give it:
+
+```
+typeof 4.5
+-> "number"
+typeof "x"
+-> "string"
+```
+
+- The other operators we saw all operated on two values; typeof takes only one. Operators that use two values are called *binary* operators, while those that take one are called *unary* operators. The minus operator can be used both as a binary operator and a unary operator:
+
+```
+- (10 - 2)
+-> -8
+```
+
 ## How does this work? Aka (The Execution Context Interview Question Answer)
 
 ```javascript
